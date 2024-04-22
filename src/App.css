@@ -1,38 +1,60 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Active-area {
+  width: 900px; /* Set the desired width for the SVG container */
+  height: 750px; /* Set the desired height for the SVG container */
+  background-color: #fefaf6;
+  padding: 10px; /* Use absolute units for padding */
+  margin-left: 2%;
+  border: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.square {
+  width: 15%;
+  height: 15%;
+  background-color: aqua;
+  margin: 1%;
+  cursor: move;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rectangle {
+  width: 15%; /* Use relative units for responsive dimensions */
+  height: 9%;
+  background-color: blue;
+  margin: 1%;
+  cursor: move;
 }
 
-.App-link {
-  color: #61dafb;
+.ellipse {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: brown;
+  margin: 1%;
+  cursor: move;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lines {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.line1,
+.line2 {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.buttons {
+  margin: 10px;
+  padding: 10px;
+}
+
+.button1 {
+  margin: 10px;
 }
