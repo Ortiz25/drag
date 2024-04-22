@@ -36,7 +36,6 @@ const ArrowLine = ({
   const arrowStartRightY = arrowStartY - (arrowSize / 2) * Math.cos(angle);
 
   const pathData = `M${from.x},${from.y} L${to.x},${to.y} `;
-  console.log("pathData", pathData);
 
   return (
     <>

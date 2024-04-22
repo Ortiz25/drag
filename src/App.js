@@ -3,7 +3,7 @@ import "./App.css";
 import Draggable from "react-draggable";
 import ArrowLine from "./components/arrow";
 import LineConnector from "./components/line";
-import Container from "react-bootstrap/Container";
+import { dotNotation } from "./components/util/jsonToDot";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
@@ -126,10 +126,11 @@ function App() {
     setCurved(false);
     setIsDrawingCurved(false);
   };
+  console.log("DOT SYNTAX:", dotNotation);
   return (
     <div className="App">
       <Row>
-        <Col sm={8}>
+        <Col xl={8}>
           <svg
             className="Active-area"
             onMouseDown={curved ? handleMouseDown : dummy}
@@ -208,7 +209,7 @@ function App() {
             ))}
           </svg>
         </Col>
-        <Col sm={4}>
+        <Col xl={4}>
           <div className="buttons">
             <div>
               <Button

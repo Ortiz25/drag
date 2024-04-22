@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const LineConnector = ({ line, index, isErasing, handleClick }) => {
+const LineConnector = ({ line, isErasing, handleClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -27,7 +27,6 @@ const LineConnector = ({ line, index, isErasing, handleClick }) => {
       </defs>
       <path
         d={line.path}
-        key={index}
         stroke={isErasing && isHovered ? "red" : "black"}
         strokeWidth="3"
         fill="none"
